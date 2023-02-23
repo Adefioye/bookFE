@@ -37,8 +37,7 @@ function ElevationScroll(props: ElevationProps) {
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
-  console.log(`matchesMD: ${matchesMD}`);
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const iOS =
     typeof navigator !== "undefined" &&
@@ -143,7 +142,7 @@ const Navbar: React.FC = () => {
                 </IconButton>
 
                 {/* To display Home and Search books in large screen */}
-                {!matchesMD &&
+                {!matchesSM &&
                   navItems.map((navItem) => (
                     <Typography
                       key={navItem}
@@ -171,7 +170,7 @@ const Navbar: React.FC = () => {
                 }}
               >
                 {/* To display in large screen */}
-                {!matchesMD && (
+                {!matchesSM && (
                   <Button
                     variant="outlined"
                     sx={{
@@ -194,7 +193,7 @@ const Navbar: React.FC = () => {
                 )}
 
                 {/* To inject menu icon */}
-                {matchesMD && (
+                {matchesSM && (
                   <Box>
                     <IconButton
                       sx={{
@@ -211,7 +210,7 @@ const Navbar: React.FC = () => {
             </Box>
 
             {/* To inject drawer */}
-            {matchesMD && drawer}
+            {matchesSM && drawer}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
