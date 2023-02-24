@@ -20,7 +20,7 @@ const theme = createTheme({
       fontSize: "2.5rem",
     },
     h3: {
-      fontFamily: "Pacifico",
+      fontFamily: "Raleway",
       fontSize: "2.5rem",
     },
     h4: {

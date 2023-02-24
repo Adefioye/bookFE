@@ -1,6 +1,6 @@
 import Navbar from "./layouts/Navbar";
 import ExploreTopBooks from "./layouts/ExploreTopBooks";
-import Carousel from "./layouts/Carousel";
+import Carousel from "./layouts/CarouselItems";
 import Heros from "./layouts/Heros";
 import LibraryServices from "./layouts/LibraryServices";
 import Footer from "./layouts/Footer";
