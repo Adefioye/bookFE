@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Button } from "@mui/material";
 
 export interface CarouselItemType {
   id: number;
@@ -25,6 +25,20 @@ const CarouselItem: React.FC<CarouselItemProp> = ({ item }) => {
         <Typography textAlign="center" variant="subtitle1">
           {item.authorName}
         </Typography>
+        <Grid
+          item
+          container
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Button
+            variant="contained"
+            sx={{ mt: "1em", mb: "2em", textTransform: "none" }}
+          >
+            Reserve
+          </Button>
+        </Grid>
       </Grid>
     </Grid>
   );

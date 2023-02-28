@@ -7,6 +7,7 @@ import Footer from "./layouts/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./Theme";
 
+
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
