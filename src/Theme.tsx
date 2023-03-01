@@ -29,10 +29,11 @@ const theme = createTheme({
       fontSize: "1.75rem",
     },
     h6: {
-      fontWeight: 500,
+      fontWeight: 700,
       fontFamily: "Raleway",
       lineHeight: 1.5,
-      fontSize: "2rem",
+      fontSize: "1.5rem",
+      // fontWeight: "bold",
     },
     body1: {
       fontSize: "1.25rem",
