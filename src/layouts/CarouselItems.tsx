@@ -9,7 +9,6 @@ import book1 from "./../Images/BooksImages/new-book-1.png";
 import book2 from "./../Images/BooksImages/new-book-2.png";
 import book3 from "./../Images/BooksImages/new-book-3.png";
 
-
 const CarouselItems: React.FC = () => {
   const items: CarouselItemType[] = [
     {
@@ -88,36 +87,38 @@ const CarouselItems: React.FC = () => {
   // };
 
   return (
-    <Box my="2rem" sx={{ display: "flex", flexDirection: "column" }}>
-      <Typography variant="h4" mb="1rem" textAlign="center">
-        Find your next "I stayed up too late reading" book.
-      </Typography>
-      <Carousel
-        responsive={responsive}
-        renderArrowsWhenDisabled={true}
-        // customLeftArrow="react-multiple-carousel__arrow"
-      >
-        {items.map((item, i) => (
-          <CarouselItem key={i} item={item} />
-        ))}
-      </Carousel>
-      <Button
-        size="large"
-        variant="contained"
-        sx={{
-          backgroundColor: "#fff",
-          color: "grey",
-          border: "1px solid #D3D3D3",
-          textTransform: "none",
-          "&:hover": {
+    <Paper elevation={6}>
+      <Box sx={{ display: "flex", flexDirection: "column", py: "2em" }}>
+        <Typography variant="h4" mb="1rem" textAlign="center">
+          Find your next "I stayed up too late reading" book.
+        </Typography>
+        <Carousel
+          responsive={responsive}
+          renderArrowsWhenDisabled={true}
+          // customLeftArrow="react-multiple-carousel__arrow"
+        >
+          {items.map((item, i) => (
+            <CarouselItem key={i} item={item} />
+          ))}
+        </Carousel>
+        <Button
+          size="large"
+          variant="contained"
+          sx={{
             backgroundColor: "#fff",
-          },
-          m: "0 auto",
-        }}
-      >
-        View More
-      </Button>
-    </Box>
+            color: "grey",
+            border: "1px solid #D3D3D3",
+            textTransform: "none",
+            "&:hover": {
+              backgroundColor: "#fff",
+            },
+            m: "0 auto",
+          }}
+        >
+          View More
+        </Button>
+      </Box>
+    </Paper>
   );
 };
 
