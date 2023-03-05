@@ -11,8 +11,6 @@ const Heros: React.FC = () => {
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
-  console.log(matchesMD);
-
   return (
     <Paper elevation={6}>
       <Box

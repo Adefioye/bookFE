@@ -45,7 +45,7 @@ const LibraryServices: React.FC = () => {
           </Typography>
           <Typography
             variant="subtitle1"
-            sx={{ mb: matchesMD ? "0.5em" : null, textAlign: "left" }}
+            sx={{ mb: matchesMD ? "0.5em" : "1em", textAlign: "left" }}
           >
             If you cannot find what you are looking for, send our library
             admin's a personal message!
