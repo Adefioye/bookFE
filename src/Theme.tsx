@@ -44,6 +44,34 @@ const theme = createTheme({
       fontWeight: 300,
     },
   },
+
+  // For component overrides
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              border: "1px solid #D3D3D3",
+            },
+            "&:hover fieldset": {
+              border: "1px solid #D3D3D3",
+            },
+            "&.Mui-focused fieldset": {
+              border: "1px solid #D3D3D3",
+            },
+          },
+        },
+      },
+    },
+    // MuiSelect: {
+    //   styleOverrides: {
+    //     outlined: {
+    //       border: "1px solid darkgrey",
+    //     },
+    //   },
+    // },
+  },
 });
 
 export default theme;

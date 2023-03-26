@@ -6,7 +6,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import ClockImage from "./../Images/PublicImages/image-3.jpg";
+import ClockImage from "../../../Images/PublicImages/image-3.jpg";
 
 const LibraryServices: React.FC = () => {
   const theme = useTheme();

@@ -5,9 +5,9 @@ import { Paper, Button, Box, Typography } from "@mui/material";
 import { CarouselItemType } from "./CarouselItem";
 import CarouselItem from "./CarouselItem";
 
-import book1 from "./../Images/BooksImages/new-book-1.png";
-import book2 from "./../Images/BooksImages/new-book-2.png";
-import book3 from "./../Images/BooksImages/new-book-3.png";
+import book1 from "../../../Images/BooksImages/new-book-1.png";
+import book2 from "../../../Images/BooksImages/new-book-2.png";
+import book3 from "../../../Images/BooksImages/new-book-3.png";
 
 const CarouselItems: React.FC = () => {
   const items: CarouselItemType[] = [

@@ -5,7 +5,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import ExploreBookBackground from "./../Images/PublicImages/image-2.jpg";
+import ExploreBookBackground from "../../../Images/PublicImages/image-2.jpg";
 
 const ExploreTopBooks: React.FC = () => {
   const theme = useTheme();
