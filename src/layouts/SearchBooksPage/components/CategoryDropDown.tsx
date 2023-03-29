@@ -28,7 +28,7 @@ const CategoryDropDown = () => {
             fontSize: "0.8rem",
             color: "#fff",
           },
-          "> label": {
+          "& > label": {
             "& .Mui-focused": {
               display: "none",
             },

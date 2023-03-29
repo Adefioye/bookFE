@@ -43,7 +43,18 @@ const Navbar: React.FC = () => {
     typeof navigator !== "undefined" &&
     /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  const navItems = ["Home", "Search Books"];
+  const navItems = [
+    {
+      id: 1,
+      item: "Home",
+      route: "/",
+    },
+    {
+      id: 2,
+      item: "Search Books",
+      route: "/search",
+    },
+  ];
 
   const drawer = (
     <>
@@ -78,7 +89,7 @@ const Navbar: React.FC = () => {
               color: "#fff",
             }}
             component={Link}
-            to={"/"}
+            to={"/search"}
           >
             <ListItemText sx={{ textAlign: "center" }}>
               Search Books
@@ -132,7 +143,7 @@ const Navbar: React.FC = () => {
                   alignItems: "center",
                 }}
               >
-                <IconButton>
+                <IconButton component={Link} to="/">
                   <Typography
                     variant="h6"
                     sx={{ color: "#fff", fontWeight: 700 }}
@@ -145,7 +156,7 @@ const Navbar: React.FC = () => {
                 {!matchesSM &&
                   navItems.map((navItem) => (
                     <Typography
-                      key={navItem}
+                      key={navItem.id}
                       sx={{
                         ml: "2em",
                         "&:hover": {
@@ -155,9 +166,9 @@ const Navbar: React.FC = () => {
                         color: "#fff",
                       }}
                       component={Link}
-                      to={"/"}
+                      to={navItem.route}
                     >
-                      {navItem}
+                      {navItem.item}
                     </Typography>
                   ))}
               </Box>

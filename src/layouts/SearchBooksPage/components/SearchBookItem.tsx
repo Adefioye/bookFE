@@ -23,7 +23,6 @@ const SearchBookItem: React.FC = () => {
           sx={{
             display: "flex",
             flexDirection: matchesSM ? "column" : "row",
-            border: "1px solid red",
             p: "1em",
             mt: "1em",
           }}

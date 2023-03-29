@@ -1,4 +1,5 @@
 import { Box, Typography, Paper, useMediaQuery, useTheme } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   const theme = useTheme();
@@ -37,11 +38,28 @@ const Footer: React.FC = () => {
         >
           <Typography
             variant="subtitle1"
-            sx={{ mb: matchesSM ? "0.5em" : null }}
+            sx={{
+              mb: matchesSM ? "0.5em" : null,
+              textDecoration: "none",
+              color: "#fff",
+              fontWeight: "500",
+            }}
+            component={Link}
+            to="/"
           >
             Home
           </Typography>
-          <Typography variant="subtitle1" sx={{ ml: matchesSM ? null : "3em" }}>
+          <Typography
+            variant="subtitle1"
+            sx={{
+              ml: matchesSM ? null : "3em",
+              textDecoration: "none",
+              color: "#fff",
+              fontWeight: "500",
+            }}
+            component={Link}
+            to="/search"
+          >
             Search Books
           </Typography>
         </Box>
