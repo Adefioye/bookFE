@@ -1,6 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
+import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -8,9 +9,9 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 const CategoryDropDown = () => {
   const [category, setCategory] = React.useState("");
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setCategory(event.target.value as string);
-  };
+  // const handleChange = (event: SelectChangeEvent) => {
+  //   setCategory(event.target.value as string);
+  // };
 
   return (
     <Box sx={{}}>
@@ -19,31 +20,32 @@ const CategoryDropDown = () => {
           "& .MuiOutlinedInput-root": {
             backgroundColor: "grey",
           },
-          "& .css-1dqx5z6-MuiFormLabel-root-MuiInputLabel-root.Mui-focused": {
-            display: "none",
-          },
+          //MuiFormLabel-root
+          // ".Mui-focused .MuiFormControl-root .MuiFormLabel-root": {
+          //   display: "none !important",
+          // },
           "& .MuiFormLabel-root": {
-            fontSize: "1rem",
+            fontSize: "0.8rem",
             color: "#fff",
+          },
+          "> label": {
+            "& .Mui-focused": {
+              display: "none",
+            },
           },
         }}
         variant="outlined"
       >
         {!category && (
-          <InputLabel
-            sx={{
-              color: "#fff",
-              // fontSize: "1rem",
-            }}
-          >
-            Book Category
+          <InputLabel sx={{ color: "#fff" }}>
+            {category ? "" : "Book Category"}
           </InputLabel>
         )}
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={category}
-          onChange={handleChange}
+          onChange={(e) => setCategory(e.target.value)}
           sx={{
             color: "#fff",
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
@@ -74,16 +76,23 @@ const CategoryDropDown = () => {
             },
           }}
         >
-          <MenuItem
-            sx={{ color: category == "Ten" ? "#fff" : null }}
-            value={10}
-          >
-            Ten
-          </MenuItem>
+          <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
+
+      {/* <TextField
+        variant="outlined"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        select
+        label={category ? "" : "Book Category"}
+      >
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+      </TextField> */}
     </Box>
   );
 };

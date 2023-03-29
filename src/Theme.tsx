@@ -26,17 +26,18 @@ const theme = createTheme({
     h4: {
       fontFamily: "Raleway",
       fontWeight: 700,
-      fontSize: "1.75rem",
-    },
-    h6: {
-      fontWeight: 700,
-      fontFamily: "Raleway",
       lineHeight: 1.5,
       fontSize: "1.5rem",
+    },
+    h6: {
+      fontWeight: 600,
+      fontFamily: "Raleway",
+      lineHeight: 1.5,
+      fontSize: "1rem",
       // fontWeight: "bold",
     },
     body1: {
-      fontSize: "1.25rem",
+      fontSize: "1rem",
       fontWeight: 300,
     },
     subtitle1: {

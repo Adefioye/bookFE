@@ -1,20 +1,30 @@
 import React, { useState } from "react";
 import SearchBookItem from "./components/SearchBookItem";
-import { Box, TextField, Button, IconButton } from "@mui/material";
+import {
+  Box,
+  TextField,
+  Button,
+  IconButton,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import CategoryDropDown from "./components/CategoryDropDown";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 
 const SearchBooksPage: React.FC = () => {
   const [search, setSearch] = useState("");
+  const theme = useTheme();
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box sx={{ padding: "2em" }}>
       <Box
         sx={{
           display: "flex",
+          flexDirection: matchesMD ? "column" : "row",
           justifyContent: "flex-start",
-          alignItems: "end",
-          mb: "2em",
+          alignItems: matchesMD ? "flex-start" : "center",
+          mb: matchesMD ? null : "2em",
         }}
       >
         <TextField
@@ -48,13 +58,19 @@ const SearchBooksPage: React.FC = () => {
             width: "6rem",
             height: "3rem",
             borderColor: "green",
-            ml: "2em",
+            ml: matchesMD ? null : "2em",
+            mt: matchesMD ? "1em" : null,
+            "&:hover": {
+              backgroundColor: "#fff",
+            },
           }}
           disableRipple
         >
           Search
         </Button>
-        <Box sx={{ ml: "4em" }}>
+        <Box
+          sx={{ ml: matchesMD ? null : "4em", mt: matchesMD ? "1em" : null }}
+        >
           <CategoryDropDown />
         </Box>
       </Box>

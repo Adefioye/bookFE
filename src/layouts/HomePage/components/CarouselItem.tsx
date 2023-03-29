@@ -6,6 +6,7 @@ export interface CarouselItemType {
   title: string;
   imgSrc: string;
   authorName: string;
+  description?: string;
 }
 
 interface CarouselItemProp {
