@@ -12,6 +12,7 @@ import CategoryDropDown from "./components/CategoryDropDown";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import Navbar from "../shared/components/Navbar";
 import Footer from "../shared/components/Footer";
+import PagePagination from "./components/Pagination";
 
 const SearchBooksPage: React.FC = () => {
   const [search, setSearch] = useState("");
@@ -80,6 +81,7 @@ const SearchBooksPage: React.FC = () => {
         </Box>
         <SearchBookItem />
       </Box>
+      <PagePagination />
       <Footer />
     </>
   );
