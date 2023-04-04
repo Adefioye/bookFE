@@ -11,13 +11,16 @@ const theme = createTheme({
     primary: {
       main: "#0e76a8",
     },
+    secondary: {
+      main: "#5cb85c",
+    },
   },
   typography: {
     h2: {
       fontFamily: "Raleway",
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1.5,
-      fontSize: "2.5rem",
+      fontSize: "2rem",
     },
     h3: {
       fontFamily: "Raleway",
@@ -37,12 +40,24 @@ const theme = createTheme({
       // fontWeight: "bold",
     },
     body1: {
-      fontSize: "1rem",
-      fontWeight: 300,
+      fontSize: "0.9rem",
+      fontFamily: "Raleway",
+      // fontWeight: 300,
+    },
+    body2: {
+      fontSize: "0.8rem",
+      fontFamily: "Raleway",
+      fontWeight: 600,
     },
     subtitle1: {
       fontSize: "1rem",
-      fontWeight: 300,
+      fontFamily: "Raleway",
+      // fontWeight: 300,
+    },
+    subtitle2: {
+      fontSize: "1rem",
+      fontFamily: "Raleway",
+      fontWeight: 600,
     },
   },
 

@@ -4,6 +4,7 @@ import Home from "./layouts/HomePage/Home";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchBooksPage from "./layouts/SearchBooksPage/SearchBooksPage";
+import BookCheckOutPage from "./layouts/checkout/BookCheckOutPage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/search" element={<SearchBooksPage />} />
+            <Route path="/checkout" element={<BookCheckOutPage />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

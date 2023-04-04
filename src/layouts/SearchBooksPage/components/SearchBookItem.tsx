@@ -32,7 +32,7 @@ const SearchBookItem: React.FC = () => {
               flex: matchesSM ? "1 0 100%" : "1 0 20%",
               display: "flex",
               justifyContent: matchesSM ? "center" : "flex-start",
-              alignItems: matchesSM ? "center" : "flex-start"
+              alignItems: matchesSM ? "center" : "flex-start",
             }}
           >
             <img
