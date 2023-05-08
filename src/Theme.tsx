@@ -4,7 +4,7 @@ import { createTheme } from "@mui/material/styles";
 // import imageRight from "./Images/PublicImages/image-1.jpg";
 // import lostImage from "./Images/PublicImages/image-3.jpg";
 
-export const mainOpacity = "rgba(0, 0, 0, 0.55)";
+// const mainOpacity = "rgba(0, 0, 0, 0.55)";
 
 const theme = createTheme({
   palette: {

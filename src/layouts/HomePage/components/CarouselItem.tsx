@@ -1,30 +1,24 @@
 import React from "react";
 import { Grid, Typography, Button } from "@mui/material";
 
-export interface CarouselItemType {
-  id: number;
-  title: string;
-  imgSrc: string;
-  authorName: string;
-  description?: string;
-}
+import BookModel from "../../../models/BookModel";
 
 interface CarouselItemProp {
-  item: CarouselItemType;
+  item: BookModel;
 }
 
 const CarouselItem: React.FC<CarouselItemProp> = ({ item }) => {
   return (
     <Grid container flexDirection="column" alignItems="center">
       <Grid item sx={{ width: "30%", height: "auto" }}>
-        <img width="100%" src={item.imgSrc} alt="" />
+        <img width="100%" src={item.img} alt="" />
       </Grid>
       <Grid item>
         <Typography textAlign="center" variant="body1">
           {item.title}
         </Typography>
         <Typography textAlign="center" variant="subtitle1">
-          {item.authorName}
+          {item.author}
         </Typography>
         <Grid
           item
